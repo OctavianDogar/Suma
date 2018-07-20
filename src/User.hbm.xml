@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="backend.model.User" table="user">
+		<id name="id" type="long">
+			<generator class="identity" />
+		</id>
+
+		<property name="uuid" column="uuid" type="string"></property>
+
+		<property name="firstName" column="firstName" type="string"></property>
+
+		<property name="lastName" column="lastName" type="string"></property>
+
+		<property name="username" column="username" type="string"></property>
+
+		<property name="password" column="password" type="string"></property>
+		
+		<property name="userType" column="userType" >
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">backend.model.UserType</param>
+				<param name="type">12</param>
+			</type>
+		
+		
+		</property>
+		
+	</class>
+</hibernate-mapping>

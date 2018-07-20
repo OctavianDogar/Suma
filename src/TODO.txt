@@ -1,0 +1,6 @@
+    	// background;photo tooltips; search; showall;filters; fonts; request target
+	// row;
+	
+	clear labels after table action; keep focus
+	
+	Confirmation ghost
